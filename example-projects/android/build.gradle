@@ -70,7 +70,7 @@ dependencies {
 }
 
 def targetDir = 'build/reports/jgiven/json'
-def adb = android.getAdbExe().toString()
+def adb = androidComponents.sdkComponents.adb.get().asFile.absolutePath
 def reportsDir = '/storage/emulated/0/Download/jgiven-reports'
 
 task cleanJGivenReports(type: Delete) {
